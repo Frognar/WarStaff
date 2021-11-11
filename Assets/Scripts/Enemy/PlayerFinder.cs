@@ -11,5 +11,9 @@ namespace Frognar {
         public Transform FindTarget() {
             return player;
         }
+
+        public bool HasTarget() {
+            return player != null;
+        }
     }
 }
