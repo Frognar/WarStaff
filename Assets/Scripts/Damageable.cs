@@ -1,3 +1,5 @@
-public interface Damageable {
-    void TakeDamage(int amount);
+namespace Frognar {
+    public interface Damageable {
+        void TakeDamage(int amount);
+    }
 }

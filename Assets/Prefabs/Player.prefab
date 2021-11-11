@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1550499859}
   - component: {fileID: 1550499860}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6741161702317496627}
   - component: {fileID: 6741161702317496624}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ahriman_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6741161702407186283}
   - component: {fileID: 6741161702407186280}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ahriman_Left_Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -256,7 +256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6741161702757043210}
   - component: {fileID: 6741161702757043211}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ahriman_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -341,7 +341,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6741161702885020502}
   - component: {fileID: 6741161702885020503}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ahriman_Right_Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -423,7 +423,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6741161703134040260}
   - component: {fileID: 6741161703134040261}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ahriman_Right_Sholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -506,7 +506,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6741161703137349375}
   - component: {fileID: 6741161703137349372}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ahriman_Right_Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -589,7 +589,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6741161703168082217}
   - component: {fileID: 6741161703168082214}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ahriman_Left_Sholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -672,7 +672,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6741161703393087599}
   - component: {fileID: 6741161703393087596}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ahriman_Left_Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -756,10 +756,12 @@ GameObject:
   - component: {fileID: 6741161703424758333}
   - component: {fileID: 6741161703424758331}
   - component: {fileID: 6741161703424758329}
+  - component: {fileID: 2136702042907242813}
+  - component: {fileID: 1585718477264827960}
   - component: {fileID: 846701670050474643}
-  - component: {fileID: 1067103371405617673}
-  - component: {fileID: 4953643107449804831}
-  m_Layer: 0
+  - component: {fileID: 1692731176}
+  - component: {fileID: 6632090117428926177}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -850,6 +852,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.5, y: 5.8}
   m_EdgeRadius: 0
+--- !u!114 &2136702042907242813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6741161703424758332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 642343b9851031142abe2c12488e22e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 5
+--- !u!114 &1585718477264827960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6741161703424758332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bcc0f28ebb376145b1fef72faa20b24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &846701670050474643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -862,7 +889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26accaffaf01f114e8f7d5bf0ece4ed3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1067103371405617673
+--- !u!114 &1692731176
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -871,11 +898,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6741161703424758332}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3561ad1e89e7a844828f7cb5fc9a27e, type: 3}
+  m_Script: {fileID: 11500000, guid: d33bd75f5c6da624bac935adef90fa39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 40
---- !u!114 &4953643107449804831
+  speed: {fileID: 11400000, guid: 518f6f1da120a114a92e2973f9d177a2, type: 2}
+--- !u!114 &6632090117428926177
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -884,7 +911,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6741161703424758332}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 167d4ba9484c9ea4d95d95e26f57bd13, type: 3}
+  m_Script: {fileID: 11500000, guid: 6426e746687676444aa100f121d13613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &4025340526121057291
@@ -894,9 +921,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6741161703137349375}
     m_Modifications:
+    - target: {fileID: 694806454568201184, guid: 7e03bb05d2b24624794410ce5923c70a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7661057529822043400, guid: 7e03bb05d2b24624794410ce5923c70a, type: 3}
       propertyPath: m_Name
       value: Ahriman_staff
+      objectReference: {fileID: 0}
+    - target: {fileID: 7661057529822043400, guid: 7e03bb05d2b24624794410ce5923c70a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7661057529822043403, guid: 7e03bb05d2b24624794410ce5923c70a, type: 3}
       propertyPath: m_RootOrder
