@@ -22,7 +22,6 @@ namespace Frognar {
             }
             if (Vector2.Distance(transform.position, targetPosition) > .5f) {
                 Direction = (targetPosition - (Vector2)transform.position).normalized;
-                Debug.DrawLine(transform.position, targetPosition, Color.red);
             }
             else
             {

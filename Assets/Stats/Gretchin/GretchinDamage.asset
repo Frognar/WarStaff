@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e39094bcea190e4cbf9fc404fe7d8ad, type: 3}
   m_Name: GretchinDamage
   m_EditorClassIdentifier: 
-  value: 2
+  value: 1

@@ -5,7 +5,7 @@ namespace Frognar {
   public class TargetFollower : MonoBehaviour, MoveDirection {
     Transform target;
     TargetFinder targetFinder;
-    [SerializeField] float stopDistance;
+    [SerializeField] FloatVariable stopDistance;
     public Vector2 Direction { get; private set; }
 
     void Awake() {
@@ -17,7 +17,7 @@ namespace Frognar {
     }
 
     void Update() {
-      if (target != null && Vector2.Distance(transform.position, target.position) > stopDistance) {
+      if (target != null && Vector2.Distance(transform.position, target.position) > stopDistance.Value) {
           Direction = (target.position - transform.position).normalized;
       } else {
         Direction = Vector2.zero;

@@ -116,7 +116,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2401644661793899390}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.1, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2401644661349021716}
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 642343b9851031142abe2c12488e22e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
+  maxHealth: {fileID: 11400000, guid: aff9271a82675964abad12d5e32d4066, type: 2}
 --- !u!114 &4640671435768734090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054f8483fe063504a884e9ec47bbaa6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stopDistance: 2.5
+  stopDistance: {fileID: 11400000, guid: 4a1a7b095bee4214ebc214ecd7cffb83, type: 2}
 --- !u!114 &3313380566523293401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,10 +264,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0ca4341341c10d4dbaec24d31db335c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: {fileID: 11400000, guid: a61ef2aa26363a2429025b56ff9eaf09, type: 2}
   attackDistance: {fileID: 11400000, guid: 4a1a7b095bee4214ebc214ecd7cffb83, type: 2}
   timeBetweenAttacks: {fileID: 11400000, guid: 4763b7eb647f77f43a3bd5f7101ed271, type: 2}
   attackSpeed: {fileID: 11400000, guid: 9d63ec37b9261a0448202ea28960ba45, type: 2}
+  damage: {fileID: 11400000, guid: a61ef2aa26363a2429025b56ff9eaf09, type: 2}
 --- !u!114 &6859377355060892861
 MonoBehaviour:
   m_ObjectHideFlags: 0

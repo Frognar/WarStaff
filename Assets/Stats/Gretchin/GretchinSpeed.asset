@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 136aa71adad87d442831f2884bdf62e9, type: 3}
   m_Name: GretchinSpeed
   m_EditorClassIdentifier: 
-  value: 10
+  value: 15

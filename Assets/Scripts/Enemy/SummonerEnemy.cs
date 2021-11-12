@@ -4,18 +4,18 @@ namespace Frognar {
   public class SummonerEnemy : Movement {
     Summoner summoner;
     TargetFinder targetFinder;
-    MeleeAttacker meleeAttacker;
+    Attacker attacker;
 
     protected override void Awake() {
       base.Awake();
       targetFinder = GetComponent<TargetFinder>();
-      meleeAttacker = GetComponent<MeleeAttacker>();
+      attacker = GetComponent<Attacker>();
       summoner = GetComponent<Summoner>();
     }
 
     void Start() {
-      meleeAttacker.SetTarget(targetFinder.FindTarget());
-      meleeAttacker.DisableAttacks();
+      attacker.SetTarget(targetFinder.FindTarget());
+      attacker.DisableAttacks();
     }
 
     protected override void Update() {
