@@ -50,7 +50,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 475dc03f4fad51c4a97489e19de0393b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 5778176356621739913}
   - component: {fileID: 5811561087592560863}
   - component: {fileID: 7881169466940333493}
+  - component: {fileID: 232766610}
   - component: {fileID: 4380670336309537534}
   - component: {fileID: 3566584440165593018}
   - component: {fileID: 7536163058253555525}
@@ -100,7 +101,6 @@ GameObject:
   - component: {fileID: 7464172085682657270}
   - component: {fileID: 5506988365507632392}
   - component: {fileID: 2307544439616684974}
-  - component: {fileID: 232766610}
   m_Layer: 7
   m_Name: Shotboy
   m_TagString: Enemy
@@ -171,6 +171,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &232766610
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2920717148988512267}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fb84d70fa2b9b4747b3930740f5176af, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &4380670336309537534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,7 +267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDistance: {fileID: 11400000, guid: 1e216c81c61073447809da5ba9d8ba33, type: 2}
   timeBetweenAttacks: {fileID: 11400000, guid: 5010bd3f35dda124e987e71495bb8456, type: 2}
-  projectile: {fileID: 5851230193235584384, guid: b5a7f88abe771f443bbd5ea0249ebebc, type: 3}
+  projectile: {fileID: 5851230193235584384, guid: 89a64efafb6e3394582864ac4da25a31, type: 3}
   shotPoint: {fileID: 5664354762846298675}
 --- !u!114 &2307544439616684974
 MonoBehaviour:
@@ -262,25 +281,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b69c1ddb19271045b72748c677149d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &232766610
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2920717148988512267}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fb84d70fa2b9b4747b3930740f5176af, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5168631285409136187
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,7 +331,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 475dc03f4fad51c4a97489e19de0393b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -351,7 +351,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
   m_Color: {r: 0.01886791, g: 0, b: 0, a: 1}
   m_FlipX: 0

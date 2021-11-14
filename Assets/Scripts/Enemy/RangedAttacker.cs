@@ -11,7 +11,6 @@ namespace Frognar {
     }
 
     protected override void Attack() {
-      Debug.Log("attack");
       animator.SetTrigger("attack");
       attackTime = Time.time + timeBetweenAttacks.Value;
     }

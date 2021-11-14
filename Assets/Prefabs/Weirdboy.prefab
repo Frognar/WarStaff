@@ -50,7 +50,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 475dc03f4fad51c4a97489e19de0393b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -269,10 +269,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0ca4341341c10d4dbaec24d31db335c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: {fileID: 11400000, guid: feb3ab424560adc4aa141bf5fb21bb70, type: 2}
   attackDistance: {fileID: 11400000, guid: e029e0b4c9393bd4a893c94d4336cd69, type: 2}
   timeBetweenAttacks: {fileID: 11400000, guid: 7aacdde4832b57247a6a5c6c80af05a1, type: 2}
   attackSpeed: {fileID: 11400000, guid: b34db516bcac22546acd83c88d6de6ef, type: 2}
+  damage: {fileID: 11400000, guid: feb3ab424560adc4aa141bf5fb21bb70, type: 2}
 --- !u!114 &1059176784219170004
 MonoBehaviour:
   m_ObjectHideFlags: 0
