@@ -9,7 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e39094bcea190e4cbf9fc404fe7d8ad, type: 3}
-  m_Name: PlayerProjectileDamage
+  m_Script: {fileID: 11500000, guid: 8cd606959661eb44986608984b33ff9b, type: 3}
+  m_Name: ShotboyProjectileData
   m_EditorClassIdentifier: 
-  value: 1
+  sprite: {fileID: 0}
+  damage: 0
+  liveTime: 0
+  speed: 0
+  hitEffect: {fileID: 0}
+  targetTag: 

@@ -9,7 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 136aa71adad87d442831f2884bdf62e9, type: 3}
-  m_Name: PlayerProjectileSpeed
+  m_Script: {fileID: 11500000, guid: 8cd606959661eb44986608984b33ff9b, type: 3}
+  m_Name: PlayerProjectileData
   m_EditorClassIdentifier: 
-  value: 15
+  sprite: {fileID: 0}
+  damage: {fileID: 0}
+  liveTime: {fileID: 0}
+  speed: {fileID: 0}

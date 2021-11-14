@@ -6,14 +6,14 @@ namespace Frognar {
     int health;
 
     void Start() {
-      health = maxHealth.Value;  
+      health = maxHealth.Value;
     }
 
     public void TakeDamage(int amount) {
       health -= amount;
       if (health <= 0) {
         Die();
-      }  
+      }
     }
 
     void Die() {

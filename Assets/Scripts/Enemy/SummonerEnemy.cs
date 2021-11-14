@@ -26,7 +26,7 @@ namespace Frognar {
     }
 
     bool CanSummon() {
-      if (moveDirection.Direction != Vector2.zero){
+      if (moveDirection.Direction != Vector2.zero) {
         return false;
       }
       return targetFinder.HasTarget() && summoner.TimeToSummon();

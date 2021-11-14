@@ -18,8 +18,9 @@ namespace Frognar {
 
     void Update() {
       if (target != null && Vector2.Distance(transform.position, target.position) > stopDistance.Value) {
-          Direction = (target.position - transform.position).normalized;
-      } else {
+        Direction = (target.position - transform.position).normalized;
+      }
+      else {
         Direction = Vector2.zero;
       }
     }

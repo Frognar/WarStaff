@@ -1,9 +1,9 @@
 using UnityEngine;
 
 namespace Frognar {
-  [CreateAssetMenu (fileName = "intVariable", menuName = "IntVariable")]
+  [CreateAssetMenu(fileName = "intVariable", menuName = "Variables/IntVariable")]
   public class IntVariable : ScriptableObject {
-    [SerializeField] private int value;
+    [SerializeField] int value;
     public int Value => value;
   }
 }

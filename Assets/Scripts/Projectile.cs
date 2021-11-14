@@ -2,30 +2,31 @@ using UnityEngine;
 
 namespace Frognar {
   public class Projectile : MonoBehaviour {
-    [SerializeField] FloatVariable speed;
-    [SerializeField] IntVariable damageAmount;
-    [SerializeField] FloatVariable lifeTime;
-    [TagSelector] [SerializeField] string targetTag;
-    [SerializeField] GameObject explosion;
+    [SerializeField] ProjectileData data;
+
+    void Awake() {
+      SpriteRenderer spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+      spriteRenderer.sprite = data.Sprite;
+    }
 
     void Start() {
-      Invoke("DestroyProjectile", lifeTime.Value);
+      Invoke("DestroyProjectile", data.LiveTime);
     }
 
     void Update() {
-      transform.Translate(Vector2.up * (speed.Value * Time.deltaTime));
+      transform.Translate(Vector2.up * (data.Speed * Time.deltaTime));
     }
 
     void DestroyProjectile() {
       Destroy(gameObject);
-      Instantiate(explosion, transform.position, Quaternion.identity);
+      Instantiate(data.HitEffect, transform.position, Quaternion.identity);
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-      if (other.CompareTag(targetTag)) {
+      if (other.CompareTag(data.TargetTag)) {
         Damageable damageable = other.GetComponent<Damageable>();
         if (damageable != null) {
-          damageable.TakeDamage(damageAmount.Value);
+          damageable.TakeDamage(data.Damage);
           DestroyProjectile();
         }
       }

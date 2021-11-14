@@ -1,5 +1,7 @@
 using System;
 
-public interface ActionTrigger {
+namespace Frognar {
+  public interface ActionTrigger {
     event EventHandler ShotTrigger;
+  }
 }

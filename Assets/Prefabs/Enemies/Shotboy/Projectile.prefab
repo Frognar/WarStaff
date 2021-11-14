@@ -200,11 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ea34ef40fa21c74baf8cf6cd30a06e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {fileID: 11400000, guid: 7eca7012991c1384a958fa694f82598a, type: 2}
-  damageAmount: {fileID: 11400000, guid: 01b0024144a61314fab7faf0ea3d2863, type: 2}
-  lifeTime: {fileID: 11400000, guid: 8f0f2aba801f2b744809d36af7e62d19, type: 2}
-  targetTag: Player
-  explosion: {fileID: 5727576669765142772, guid: 370b00a3b0569034996d4c9710ac450f, type: 3}
+  data: {fileID: 11400000, guid: b2b7a3de022a84f4abbc2e5f78bc9326, type: 2}
 --- !u!61 &-6258426461685590511
 BoxCollider2D:
   m_ObjectHideFlags: 0

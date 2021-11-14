@@ -1,5 +1,7 @@
 using UnityEngine;
 
-public interface PointInWorld {
+namespace Frognar {
+  public interface PointInWorld {
     Vector3 Point { get; }
+  }
 }

@@ -1,5 +1,5 @@
 namespace Frognar {
-    public class Player : Movement {
-        
-    }
+  public class Player : Movement {
+
+  }
 }
