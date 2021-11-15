@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cd606959661eb44986608984b33ff9b, type: 3}
   m_Name: PlayerProjectileData
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  damage: {fileID: 0}
-  liveTime: {fileID: 0}
-  speed: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 8d0eb13ebd338aa45bf833b2c25e7475, type: 3}
+  damage: 1
+  liveTime: 1
+  speed: 15
+  hitEffect: {fileID: 5727576669765142772, guid: 370b00a3b0569034996d4c9710ac450f, type: 3}
+  targetTag: Enemy

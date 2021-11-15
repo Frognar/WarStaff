@@ -3,13 +3,18 @@ using UnityEngine;
 namespace Frognar {
   public class Projectile : MonoBehaviour {
     [SerializeField] ProjectileData data;
+    Pool<Projectile> pool;
+
+    public void SetPool(Pool<Projectile> pool) {
+      this.pool = pool;
+    }
 
     void Awake() {
       SpriteRenderer spriteRenderer = GetComponentInChildren<SpriteRenderer>();
       spriteRenderer.sprite = data.Sprite;
     }
 
-    void Start() {
+    void OnEnable() {
       Invoke("DestroyProjectile", data.LiveTime);
     }
 
@@ -18,7 +23,8 @@ namespace Frognar {
     }
 
     void DestroyProjectile() {
-      Destroy(gameObject);
+      CancelInvoke("DestroyProjectile");
+      pool.Release(this);
       Instantiate(data.HitEffect, transform.position, Quaternion.identity);
     }
 
