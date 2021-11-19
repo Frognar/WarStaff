@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d992d116a58874aba524ba86b1d08f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minion: {fileID: 2401644661793899390, guid: ca686ff6f6d513b4fb7bf7ed9b8a8173, type: 3}
+  minion: {fileID: 6859377355060892861, guid: ca686ff6f6d513b4fb7bf7ed9b8a8173, type: 3}
   timeBetweenSummons: {fileID: 11400000, guid: 8d037b8eebea411438eda84954ab2a24, type: 2}
 --- !u!114 &1440369326935635937
 MonoBehaviour:
@@ -311,3 +311,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cd251b785e875d41884fc2214e9971d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: {fileID: 307643571582136700}

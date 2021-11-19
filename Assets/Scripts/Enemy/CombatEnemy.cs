@@ -1,5 +1,5 @@
 namespace Frognar {
-  public class CombatEnemy : Movement {
+  public class CombatEnemy : Enemy {
     TargetFinder targetFinder;
     Attacker attacker;
 

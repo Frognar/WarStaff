@@ -1,7 +1,7 @@
 using UnityEngine;
 
 namespace Frognar {
-  public class SummonerEnemy : Movement {
+  public class SummonerEnemy : Enemy {
     Summoner summoner;
     TargetFinder targetFinder;
     Attacker attacker;
