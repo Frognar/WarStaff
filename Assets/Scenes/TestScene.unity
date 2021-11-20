@@ -897,7 +897,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1616042207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1514,6 +1514,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 18709095018618112, guid: ad0830f0cd265674194a8eb4f3660f5f, type: 3}
+      propertyPath: maxHealth
+      value: 
+      objectReference: {fileID: 11400000, guid: 09151e3fb544d8149a8c731dc708e52b, type: 2}
     - target: {fileID: 6741161703424758330, guid: ad0830f0cd265674194a8eb4f3660f5f, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1566,5 +1570,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2136702042907242813, guid: ad0830f0cd265674194a8eb4f3660f5f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ad0830f0cd265674194a8eb4f3660f5f, type: 3}
