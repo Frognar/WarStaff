@@ -5,7 +5,7 @@ namespace Frognar {
     HealthSystem healthSystem;
     [SerializeField] IntVariable maxHealth;
     HealthBar healthBar;
-    Pool<Enemy> pool;
+    Factorable factorable;
 
     public void TakeDamage(int amount) {
       healthSystem.TakeDamage(amount);
@@ -20,11 +20,8 @@ namespace Frognar {
       healthSystem = new HealthSystem(maxHealth.Value);
       healthBar = GetComponentInChildren<HealthBar>();
       healthBar.SetHealthSystem(healthSystem);
-      healthSystem.OnDie += (s, e) => pool.Release(this);
-    }
-
-    public void SetPool(Pool<Enemy> pool) {
-      this.pool = pool;
+      factorable = GetComponent<Factorable>();
+      healthSystem.OnDie += (s, e) => factorable.ReturnToFactory();
     }
   }
 }

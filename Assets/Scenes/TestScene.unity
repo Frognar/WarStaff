@@ -911,12 +911,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - enemies: 01000000
-    count: 5
+  - enemies: 03000000
+    count: 2
     timeBetweenSpawns: 2
   - enemies: 0100000002000000
-    count: 7
-    timeBetweenSpawns: 1
+    count: 25
+    timeBetweenSpawns: 2
   - enemies: 010000000200000003000000
     count: 12
     timeBetweenSpawns: 2
@@ -934,7 +934,7 @@ MonoBehaviour:
   - {fileID: 655932578}
   - {fileID: 1466851437}
   timeBetweenWaves: 3
-  enemyPoolData: {fileID: 11400000, guid: 29ba0c471d7c01943ad012eb9db0c923, type: 2}
+  enemyFactories: {fileID: 11400000, guid: 29ba0c471d7c01943ad012eb9db0c923, type: 2}
 --- !u!4 &1616042208
 Transform:
   m_ObjectHideFlags: 0

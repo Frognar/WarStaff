@@ -8,8 +8,7 @@ namespace Frognar {
     [SerializeField] List<Wave> waves;
     [SerializeField] List<Transform> spawnPoints;
     [SerializeField] float timeBetweenWaves;
-    [SerializeField] EnemyPoolData enemyPoolData;
-    Dictionary<EnemyType, Pool<Enemy>> enemyPool;
+    [SerializeField] EnemyFactories enemyFactories;
     Transform currentSpawnPoint;
     EnemyType currentEnemyType;
 
@@ -21,29 +20,6 @@ namespace Frognar {
 
     void Awake() {
       currentWaveEnemies = new List<Enemy>();
-      enemyPool = new Dictionary<EnemyType, Pool<Enemy>>();
-      foreach (EnemyType type in enemyPoolData.enemies.Keys) {
-        enemyPool[type] = new Pool<Enemy>(OnCreate, OnGet, OnRelease);
-      }
-    }
-
-    Enemy OnCreate() {
-      var enemy = Instantiate(enemyPoolData.enemies[currentEnemyType],
-        currentSpawnPoint.position, Quaternion.identity);
-      enemy.SetPool(enemyPool[currentEnemyType]);
-      return enemy;
-    }
-
-    Enemy OnGet(Enemy enemy) {
-      enemy.Reset();
-      enemy.transform.position = currentSpawnPoint.position;
-      enemy.transform.rotation = currentSpawnPoint.rotation;
-      enemy.gameObject.SetActive(true);
-      return enemy;
-    }
-
-    void OnRelease(Enemy enemy) {
-      enemy.gameObject.SetActive(false);
     }
 
     void Start() {
@@ -66,7 +42,9 @@ namespace Frognar {
 
         currentEnemyType = currentWave.enemies[Random.Range(0, currentWave.enemies.Count - 1)];
         currentSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Count - 1)];
-        Enemy enemy = enemyPool[currentEnemyType].Get();
+        Factorable factorable = enemyFactories.factories[currentEnemyType].GetProduct(currentSpawnPoint.position, currentSpawnPoint.rotation);
+        Enemy enemy = factorable.GetComponent<Enemy>();
+        enemy.Reset();
         currentWaveEnemies.Add(enemy);
         finishedSpawning = i == currentWave.count - 1;
 
