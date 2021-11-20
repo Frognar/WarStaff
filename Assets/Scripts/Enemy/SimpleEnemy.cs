@@ -1,21 +1,26 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Frognar {
-  public class Player : Movement, Damageable {
+  public class SimpleEnemy : MonoBehaviour, Damageable {
     HealthSystem healthSystem;
     [SerializeField] IntVariable maxHealth;
     HealthBar healthBar;
+    Factorable factorable;
 
     public void TakeDamage(int amount) {
       healthSystem.TakeDamage(amount);
     }
 
-    protected override void Awake() {
-      base.Awake();
+    public void Reset() {
+      healthSystem.Reset();
+    }
+
+    void Awake() {
       healthSystem = new HealthSystem(maxHealth.Value);
       healthBar = GetComponentInChildren<HealthBar>();
       healthBar.SetHealthSystem(healthSystem);
-      healthSystem.OnDie += (s, e) => Destroy(gameObject);
+      factorable = GetComponent<Factorable>();
+      healthSystem.OnDie += (s, e) => factorable.ReturnToFactory();
     }
   }
 }

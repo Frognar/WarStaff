@@ -10,24 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9ea7b2a83cbc97f4f9e5207a244473d0, type: 3}
-  m_Name: Enemy Pool Data
+  m_Name: Enemy Factories
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 6859377355060892861, guid: ca686ff6f6d513b4fb7bf7ed9b8a8173, type: 3}
-    - {fileID: -7171052680982886534, guid: a1d6a18318356b0459c7b63a166b9b51, type: 3}
-    - {fileID: 2307544439616684974, guid: a1b4b6568f434034ca91167e223d9243, type: 3}
-    - {fileID: 3641521522802386734, guid: d8e6c959fff5b0e4899e10fe9c806569, type: 3}
+    - {fileID: 11400000, guid: d1967c623c26ce148a35209806316563, type: 2}
+    - {fileID: 11400000, guid: 3811b83e4f9f8724c9f831cf812b03c7, type: 2}
+    - {fileID: 11400000, guid: 542696bf4e6ec4c488cc1ea4196137ba, type: 2}
+    - {fileID: 11400000, guid: 26b7ec7b710f61b4d8620d4d9865bb21, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: enemies
+    - Name: factories
       Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[Frognar.EnemyType, Assembly-CSharp],[Frognar.Enemy,
+      Data: 0|System.Collections.Generic.Dictionary`2[[Frognar.EnemyType, Assembly-CSharp],[Frognar.Factory,
         Assembly-CSharp]], mscorlib
     - Name: comparer
       Entry: 7

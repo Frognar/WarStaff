@@ -911,12 +911,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - enemies: 01000000
-    count: 5
+  - enemies: 03000000
+    count: 2
     timeBetweenSpawns: 2
   - enemies: 0100000002000000
-    count: 7
-    timeBetweenSpawns: 1
+    count: 25
+    timeBetweenSpawns: 2
   - enemies: 010000000200000003000000
     count: 12
     timeBetweenSpawns: 2
@@ -934,7 +934,7 @@ MonoBehaviour:
   - {fileID: 655932578}
   - {fileID: 1466851437}
   timeBetweenWaves: 3
-  enemyPoolData: {fileID: 11400000, guid: 29ba0c471d7c01943ad012eb9db0c923, type: 2}
+  enemyFactories: {fileID: 11400000, guid: 29ba0c471d7c01943ad012eb9db0c923, type: 2}
 --- !u!4 &1616042208
 Transform:
   m_ObjectHideFlags: 0
@@ -1470,6 +1470,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 18709095018618112, guid: ad0830f0cd265674194a8eb4f3660f5f, type: 3}
+      propertyPath: maxHealth
+      value: 
+      objectReference: {fileID: 11400000, guid: 09151e3fb544d8149a8c731dc708e52b, type: 2}
     - target: {fileID: 6741161703424758330, guid: ad0830f0cd265674194a8eb4f3660f5f, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1518,5 +1522,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6741161703424758332, guid: ad0830f0cd265674194a8eb4f3660f5f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2136702042907242813, guid: ad0830f0cd265674194a8eb4f3660f5f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ad0830f0cd265674194a8eb4f3660f5f, type: 3}
