@@ -2,7 +2,6 @@ using UnityEngine;
 
 namespace Frognar {
   public class Summoner : MonoBehaviour {
-    [SerializeField] Enemy minion;
     [SerializeField] FloatVariable timeBetweenSummons;
     [SerializeField] Factory minionFactory;
     SummonAnimator summonAnimator;
