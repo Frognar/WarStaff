@@ -159,9 +159,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e9673094ea5ef8458cdf1140ec3d7f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: -9175373983651873199, guid: 89e982b35ffc70246a2f9c70c8d443c9, type: 3}
   shotPoint: {fileID: 8125149534400491614}
   timeBetwenShots: 0.5
+  projectileFactory: {fileID: 11400000, guid: 4c6fcbbd5d572d0469056a339829f75d, type: 2}
 --- !u!114 &7543981772276569571
 MonoBehaviour:
   m_ObjectHideFlags: 0
