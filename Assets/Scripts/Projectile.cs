@@ -3,13 +3,11 @@ using UnityEngine;
 namespace Frognar {
   public class Projectile : MonoBehaviour {
     [SerializeField] ProjectileData data;
-    Pool<Projectile> pool;
-
-    public void SetPool(Pool<Projectile> pool) {
-      this.pool = pool;
-    }
+    [SerializeField] Factory factory;
+    Factorable factorable;
 
     void Awake() {
+      factorable = GetComponent<Factorable>();
       SpriteRenderer spriteRenderer = GetComponentInChildren<SpriteRenderer>();
       spriteRenderer.sprite = data.Sprite;
     }
@@ -24,8 +22,10 @@ namespace Frognar {
 
     void DestroyProjectile() {
       CancelInvoke("DestroyProjectile");
-      pool.Release(this);
-      Instantiate(data.HitEffect, transform.position, Quaternion.identity);
+      factorable.ReturnToFactory();
+      Factorable product = factory.GetProduct(transform.position, Quaternion.identity);
+      ParticleSystem explosion = product.GetComponent<ParticleSystem>();
+      explosion.Play();
     }
 
     void OnTriggerEnter2D(Collider2D other) {
