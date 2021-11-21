@@ -164,7 +164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5784031225687547272}
   - component: {fileID: -6258426461685590511}
-  - component: {fileID: 2124320100933156736}
+  - component: {fileID: 3612620730992905082}
   m_Layer: 0
   m_Name: Fellball
   m_TagString: Untagged
@@ -214,7 +214,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 2.56}
   m_EdgeRadius: 0
---- !u!114 &2124320100933156736
+--- !u!114 &3612620730992905082
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -227,4 +227,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: ee6836b5049873346970d625bd335e98, type: 2}
-  particleSystemFactory: {fileID: 11400000, guid: 7de7165a606648e4ebe536ab2f9ff04c, type: 2}

@@ -911,14 +911,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - enemies: 03000000
-    count: 2
+  - enemies: 01000000
+    count: 4
     timeBetweenSpawns: 2
   - enemies: 0100000002000000
-    count: 25
+    count: 7
     timeBetweenSpawns: 2
   - enemies: 010000000200000003000000
-    count: 12
+    count: 10
     timeBetweenSpawns: 2
   spawnPoints:
   - {fileID: 484285990}

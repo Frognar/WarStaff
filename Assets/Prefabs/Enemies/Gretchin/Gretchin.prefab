@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 8302331955225256490}
   - component: {fileID: 2360109524566555910}
   - component: {fileID: 6859377355060892861}
+  - component: {fileID: 3049361567993743937}
   m_Layer: 9
   m_Name: Gretchin
   m_TagString: Enemy
@@ -223,10 +224,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2401644661793899390}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d33bd75f5c6da624bac935adef90fa39, type: 3}
+  m_Script: {fileID: 11500000, guid: e552314bf9f45e445a9459fe69b0faa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {fileID: 11400000, guid: 9610218ddc0914d4d84b929dd05ac582, type: 2}
+  moveSpeed: {fileID: 11400000, guid: 9610218ddc0914d4d84b929dd05ac582, type: 2}
 --- !u!114 &8302331955225256490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,11 +265,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 2401644661793899390}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b69c1ddb19271045b72748c677149d2, type: 3}
+  m_Script: {fileID: 11500000, guid: c29cc9606f23db14abf469eb9cda7889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyFactory: {fileID: 11400000, guid: d1967c623c26ce148a35209806316563, type: 2}
+--- !u!114 &3049361567993743937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2401644661793899390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb8fe4ac0963e447b7e026da8a780e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: {fileID: 11400000, guid: aff9271a82675964abad12d5e32d4066, type: 2}
-  enemyFactory: {fileID: 11400000, guid: d1967c623c26ce148a35209806316563, type: 2}
 --- !u!1001 &4161671538422537998
 PrefabInstance:
   m_ObjectHideFlags: 0

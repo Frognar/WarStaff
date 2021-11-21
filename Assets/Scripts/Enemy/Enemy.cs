@@ -1,26 +1,25 @@
 using UnityEngine;
 
 namespace Frognar {
-  public class Enemy : Movement, Damageable, Factorable {
-    HealthSystem healthSystem;
-    [SerializeField] IntVariable maxHealth;
+  public class Enemy : MonoBehaviour, Factorable {
     [SerializeField] EnemyFactory enemyFactory;
-    HealthBar healthBar;
+    Health health;
+    protected TargetFinder targetFinder;
+    protected Attacker attacker;
 
-    public void TakeDamage(int amount) {
-      healthSystem.TakeDamage(amount);
+    protected virtual void Awake() {
+      health = GetComponent<Health>();
+      health.OnDie += ReturnToFactory;
+      targetFinder = GetComponent<TargetFinder>();
+      attacker = GetComponent<Attacker>();
+    }
+
+    void Start() {
+      attacker.SetTarget(targetFinder.FindTarget());
     }
 
     public void Reset() {
-      healthSystem.Reset();
-    }
-
-    protected override void Awake() {
-      base.Awake();
-      healthSystem = new HealthSystem(maxHealth.Value);
-      healthBar = GetComponentInChildren<HealthBar>();
-      healthBar.SetHealthSystem(healthSystem);
-      healthSystem.OnDie += (s, e) => ReturnToFactory();
+      health.Reset();
     }
 
     public void SetFactory<T>(Factory<T> factory) where T : MonoBehaviour, Factorable {

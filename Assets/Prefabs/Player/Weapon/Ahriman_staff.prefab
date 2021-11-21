@@ -121,9 +121,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7661057529822043403}
+  - component: {fileID: 7610474625214852234}
+  - component: {fileID: 4455345274575107917}
   - component: {fileID: 296734752}
   - component: {fileID: 7543981772276569571}
-  - component: {fileID: 522706939246830221}
   m_Layer: 0
   m_Name: Ahriman_staff
   m_TagString: Untagged
@@ -147,6 +148,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7610474625214852234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7661057529822043400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7dba6e5fe15c43aeb3b5d627b0b00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4455345274575107917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7661057529822043400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2a2fc9c69ca7e3469e487e585b5dd62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &296734752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,17 +197,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11ce9b98e72c6f84a9777bea546f78cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &522706939246830221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7661057529822043400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9dd594c781bbff4f873dba505ddb3b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

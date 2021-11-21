@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 7464172085682657270}
   - component: {fileID: 5506988365507632392}
   - component: {fileID: 2307544439616684974}
+  - component: {fileID: 3971420793024139980}
   m_Layer: 7
   m_Name: Shotboy
   m_TagString: Enemy
@@ -224,10 +225,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2920717148988512267}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d33bd75f5c6da624bac935adef90fa39, type: 3}
+  m_Script: {fileID: 11500000, guid: e552314bf9f45e445a9459fe69b0faa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {fileID: 11400000, guid: f985bd5d361ba994faaf315ff9f091dd, type: 2}
+  moveSpeed: {fileID: 11400000, guid: f985bd5d361ba994faaf315ff9f091dd, type: 2}
 --- !u!114 &7464172085682657270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,11 +266,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 2920717148988512267}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b69c1ddb19271045b72748c677149d2, type: 3}
+  m_Script: {fileID: 11500000, guid: c29cc9606f23db14abf469eb9cda7889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyFactory: {fileID: 11400000, guid: 4501719765759574bb2a368e353adc32, type: 2}
+--- !u!114 &3971420793024139980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2920717148988512267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb8fe4ac0963e447b7e026da8a780e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: {fileID: 11400000, guid: 60d2b0053e0a9b24ebc2441e0a9dee97, type: 2}
-  enemyFactory: {fileID: 11400000, guid: 4501719765759574bb2a368e353adc32, type: 2}
 --- !u!1 &5168631285409136187
 GameObject:
   m_ObjectHideFlags: 0

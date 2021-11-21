@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 805a74dfb96c1fc40ba21199c70024dd, type: 3}
   m_Name: Player Projectile Factory
   m_EditorClassIdentifier: 
-  productReceipt: {fileID: 2124320100933156736, guid: 2740e59a5743305459871f5e90b7d1b4, type: 3}
+  productReceipt: {fileID: 3612620730992905082, guid: 2740e59a5743305459871f5e90b7d1b4, type: 3}
