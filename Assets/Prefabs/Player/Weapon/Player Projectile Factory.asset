@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 753b33289b7e9e249b199042215de4bf, type: 3}
-  m_Name: Shotboy Factory
+  m_Script: {fileID: 11500000, guid: 805a74dfb96c1fc40ba21199c70024dd, type: 3}
+  m_Name: Player Projectile Factory
   m_EditorClassIdentifier: 
-  productReceipt: {fileID: 2307544439616684974, guid: a1b4b6568f434034ca91167e223d9243, type: 3}
+  productReceipt: {fileID: 2124320100933156736, guid: 2740e59a5743305459871f5e90b7d1b4, type: 3}

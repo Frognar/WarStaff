@@ -1,11 +1,11 @@
 using UnityEngine;
 
 namespace Frognar {
-  public class Enemy : Movement, Damageable {
+  public class Enemy : Movement, Damageable, Factorable {
     HealthSystem healthSystem;
     [SerializeField] IntVariable maxHealth;
+    [SerializeField] EnemyFactory enemyFactory;
     HealthBar healthBar;
-    Factorable factorable;
 
     public void TakeDamage(int amount) {
       healthSystem.TakeDamage(amount);
@@ -20,8 +20,15 @@ namespace Frognar {
       healthSystem = new HealthSystem(maxHealth.Value);
       healthBar = GetComponentInChildren<HealthBar>();
       healthBar.SetHealthSystem(healthSystem);
-      factorable = GetComponent<Factorable>();
-      healthSystem.OnDie += (s, e) => factorable.ReturnToFactory();
+      healthSystem.OnDie += (s, e) => ReturnToFactory();
+    }
+
+    public void SetFactory<T>(Factory<T> factory) where T : MonoBehaviour, Factorable {
+      enemyFactory = factory as EnemyFactory;
+    }
+
+    public void ReturnToFactory() {
+      enemyFactory.ReturnProduct(this);
     }
   }
 }

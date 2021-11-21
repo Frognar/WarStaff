@@ -5,7 +5,7 @@ namespace Frognar {
   public class ProjectileShooter : MonoBehaviour {
     [SerializeField] Transform shotPoint;
     [SerializeField] float timeBetwenShots;
-    [SerializeField] Factory projectileFactory;
+    [SerializeField] ProjectileFactory projectileFactory;
     float shotTime;
     ActionTrigger actionTrigger;
 

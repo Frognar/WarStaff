@@ -21,12 +21,12 @@ namespace Frognar {
     [SerializeField] float speed;
     public float Speed => speed;
 
-    [VerticalGroup("Split/Right"), LabelWidth(80)]
-    [SerializeField] GameObject hitEffect;
-    public GameObject HitEffect => hitEffect;
+    [LabelWidth(140)]
+    [SerializeField] ParticleSystemFactory particleSystemFactory;
+    public ParticleSystemFactory ParticleSystemFactory => particleSystemFactory;
 
 
-    [VerticalGroup("Split/Right"), LabelWidth(80)]
+    [LabelWidth(140)]
     [TagSelector]
     [SerializeField] string targetTag;
     public string TargetTag => targetTag;

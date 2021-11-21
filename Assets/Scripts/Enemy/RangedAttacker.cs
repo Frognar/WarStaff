@@ -3,7 +3,7 @@ using UnityEngine;
 namespace Frognar {
   public class RangedAttacker : Attacker {
     [SerializeField] Transform shotPoint;
-    [SerializeField] Factory projectileFactory;
+    [SerializeField] ProjectileFactory projectileFactory;
     Animator animator;
 
     void Awake() {

@@ -100,7 +100,6 @@ GameObject:
   - component: {fileID: 7464172085682657270}
   - component: {fileID: 5506988365507632392}
   - component: {fileID: 2307544439616684974}
-  - component: {fileID: -3680751040583513030}
   m_Layer: 7
   m_Name: Shotboy
   m_TagString: Enemy
@@ -256,7 +255,7 @@ MonoBehaviour:
   attackDistance: {fileID: 11400000, guid: 1e216c81c61073447809da5ba9d8ba33, type: 2}
   timeBetweenAttacks: {fileID: 11400000, guid: 5010bd3f35dda124e987e71495bb8456, type: 2}
   shotPoint: {fileID: 5664354762846298675}
-  projectileFactory: {fileID: 11400000, guid: 60036fc60a215eb4680032b64f9e8b1a, type: 2}
+  projectileFactory: {fileID: 11400000, guid: f9d02a93bb1674147bed1dbd48c9ced6, type: 2}
 --- !u!114 &2307544439616684974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,18 +269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: {fileID: 11400000, guid: 60d2b0053e0a9b24ebc2441e0a9dee97, type: 2}
---- !u!114 &-3680751040583513030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2920717148988512267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3131b95f696f42c4ab62ed5df1f8baeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  enemyFactory: {fileID: 11400000, guid: 4501719765759574bb2a368e353adc32, type: 2}
 --- !u!1 &5168631285409136187
 GameObject:
   m_ObjectHideFlags: 0

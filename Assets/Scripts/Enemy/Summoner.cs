@@ -3,7 +3,7 @@ using UnityEngine;
 namespace Frognar {
   public class Summoner : MonoBehaviour {
     [SerializeField] FloatVariable timeBetweenSummons;
-    [SerializeField] Factory minionFactory;
+    [SerializeField] EnemyFactory enemyFactory;
     SummonAnimator summonAnimator;
     float summonTime;
 
@@ -21,8 +21,7 @@ namespace Frognar {
     }
 
     public void Summon() {
-      Factorable product = minionFactory.GetProduct(transform.position, transform.rotation);
-      Enemy minion = product.GetComponent<Enemy>();
+      Enemy minion = enemyFactory.GetProduct(transform.position, transform.rotation);
       minion.Reset();
     }
   }
