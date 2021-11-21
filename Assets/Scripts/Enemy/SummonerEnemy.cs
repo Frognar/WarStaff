@@ -2,34 +2,47 @@ using UnityEngine;
 
 namespace Frognar {
   public class SummonerEnemy : Enemy {
-    Summoner summoner;
-    TargetFinder targetFinder;
-    Attacker attacker;
+    RandomPointFinder randomPointFinder;
+    [SerializeField] FloatVariable timeBetweenSummons;
+    [SerializeField] EnemyFactory minionFactory;
+    SummonAnimator summonAnimator;
+    float summonTime;
 
     protected override void Awake() {
       base.Awake();
-      targetFinder = GetComponent<TargetFinder>();
-      attacker = GetComponent<Attacker>();
-      summoner = GetComponent<Summoner>();
+      randomPointFinder = GetComponent<RandomPointFinder>();
+      summonAnimator = GetComponent<SummonAnimator>();
     }
 
     void Start() {
-      attacker.SetTarget(targetFinder.FindTarget());
       attacker.DisableAttacks();
     }
 
-    protected override void Update() {
-      base.Update();
+    void Update() {
       if (CanSummon()) {
-        summoner.StartSummoning();
+        StartSummoning();
       }
     }
 
     bool CanSummon() {
-      if (moveDirection.Direction != Vector2.zero) {
+      if (!randomPointFinder.TargetReached) {
         return false;
       }
-      return targetFinder.HasTarget() && summoner.TimeToSummon();
+      return targetFinder.HasTarget() && TimeToSummon();
+    }
+
+    public bool TimeToSummon() {
+      return Time.time > summonTime;
+    }
+
+    public void StartSummoning() {
+      summonAnimator.PlaySummonAnimation();
+      summonTime = Time.time + timeBetweenSummons.Value;
+    }
+
+    public void Summon() {
+      Enemy minion = minionFactory.GetProduct(transform.position, transform.rotation);
+      minion.Reset();
     }
   }
 }

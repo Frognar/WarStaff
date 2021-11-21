@@ -99,10 +99,9 @@ GameObject:
   - component: {fileID: 2103355155235955285}
   - component: {fileID: 6731912775687101012}
   - component: {fileID: 929400493944303312}
-  - component: {fileID: 1059176784219170004}
   - component: {fileID: 1440369326935635937}
   - component: {fileID: 3641521522802386734}
-  - component: {fileID: 3155957668988992961}
+  - component: {fileID: 1734554913464541410}
   m_Layer: 8
   m_Name: Weirdboy
   m_TagString: Enemy
@@ -229,10 +228,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3993282033600728943}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d33bd75f5c6da624bac935adef90fa39, type: 3}
+  m_Script: {fileID: 11500000, guid: e552314bf9f45e445a9459fe69b0faa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {fileID: 11400000, guid: 3346b5b88c510f143abb626159ffe99c, type: 2}
+  moveSpeed: {fileID: 11400000, guid: 3346b5b88c510f143abb626159ffe99c, type: 2}
 --- !u!114 &6731912775687101012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,21 +260,6 @@ MonoBehaviour:
   timeBetweenAttacks: {fileID: 11400000, guid: 7aacdde4832b57247a6a5c6c80af05a1, type: 2}
   attackSpeed: {fileID: 11400000, guid: b34db516bcac22546acd83c88d6de6ef, type: 2}
   damage: {fileID: 11400000, guid: feb3ab424560adc4aa141bf5fb21bb70, type: 2}
---- !u!114 &1059176784219170004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3993282033600728943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6d992d116a58874aba524ba86b1d08f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minion: {fileID: 6859377355060892861, guid: ca686ff6f6d513b4fb7bf7ed9b8a8173, type: 3}
-  timeBetweenSummons: {fileID: 11400000, guid: 8d037b8eebea411438eda84954ab2a24, type: 2}
-  minionFactory: {fileID: 11400000, guid: d1967c623c26ce148a35209806316563, type: 2}
 --- !u!114 &1440369326935635937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,8 +284,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cd251b785e875d41884fc2214e9971d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: {fileID: 11400000, guid: 23b552f0655c2da4a8a0f916700200b9, type: 2}
---- !u!114 &3155957668988992961
+  enemyFactory: {fileID: 11400000, guid: 26b7ec7b710f61b4d8620d4d9865bb21, type: 2}
+  timeBetweenSummons: {fileID: 11400000, guid: 8d037b8eebea411438eda84954ab2a24, type: 2}
+  minionFactory: {fileID: 11400000, guid: d1967c623c26ce148a35209806316563, type: 2}
+--- !u!114 &1734554913464541410
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -310,9 +296,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3993282033600728943}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3131b95f696f42c4ab62ed5df1f8baeb, type: 3}
+  m_Script: {fileID: 11500000, guid: 5fb8fe4ac0963e447b7e026da8a780e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: {fileID: 11400000, guid: 23b552f0655c2da4a8a0f916700200b9, type: 2}
 --- !u!1001 &4774759317910574127
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace Frognar {
@@ -16,10 +15,8 @@ namespace Frognar {
       healthSystem.OnHeal += UpdateHealthBar;
     }
 
-    void UpdateHealthBar(object sender, EventArgs e) {
-      if (barHandler != null) {
-        barHandler.localScale = new Vector3(healthSystem.GetHealthPercentage(), 1);
-      }
+    void UpdateHealthBar() {
+      barHandler.localScale = new Vector3(healthSystem.GetHealthPercentage(), 1);
     }
   }
 }

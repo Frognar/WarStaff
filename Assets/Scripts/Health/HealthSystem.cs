@@ -1,12 +1,13 @@
-using System;
-
 namespace Frognar {
   public class HealthSystem : Damageable, Healable {
-    public event EventHandler OnTakeDamage;
-    public event EventHandler OnHeal;
-    public event EventHandler OnDie;
+    public delegate void onTakeDamage();
+    public event onTakeDamage OnTakeDamage;
+    public delegate void onHeal();
+    public event onHeal OnHeal;
+    public delegate void onDie();
+    public event onDie OnDie;
+    readonly int maxHealth;
     int health;
-    int maxHealth;
     bool dead;
 
     public HealthSystem(int maxHealth) {
@@ -28,14 +29,14 @@ namespace Frognar {
         Die();
       }
       else {
-        OnTakeDamage?.Invoke(this, EventArgs.Empty);
+        OnTakeDamage?.Invoke();
       }
     }
 
     void Die() {
       dead = true;
       health = 0;
-      OnDie?.Invoke(this, EventArgs.Empty);
+      OnDie?.Invoke();
     }
 
     public void Heal(int amount) {
@@ -43,7 +44,7 @@ namespace Frognar {
       if (health > maxHealth) {
         health = maxHealth;
       }
-      OnHeal?.Invoke(this, EventArgs.Empty);
+      OnHeal?.Invoke();
     }
   }
 }
