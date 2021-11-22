@@ -6,7 +6,7 @@ namespace Frognar {
 
     void Awake() {
       health = GetComponent<Health>();
-      health.OnDie += () => Destroy(gameObject);
+      health.RegisterOnDie(() => Destroy(gameObject));
     }
   }
 }

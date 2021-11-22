@@ -1,18 +1,18 @@
 using UnityEngine;
 
 namespace Frognar {
-  public class RangedAttacker : Attacker {
+  public class RangedEnemy : Enemy {
     [SerializeField] Transform shotPoint;
     [SerializeField] ProjectileFactory projectileFactory;
     Animator animator;
 
-    void Awake() {
+    protected override void Awake() {
+      base.Awake();
       animator = GetComponent<Animator>();
     }
 
-    protected override void Attack() {
+    protected override void DoAttack() {
       animator.SetTrigger("attack");
-      attackTime = Time.time + timeBetweenAttacks.Value;
     }
 
     public void Shot() {

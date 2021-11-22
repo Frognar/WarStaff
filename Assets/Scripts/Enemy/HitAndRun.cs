@@ -2,14 +2,20 @@ using System.Collections;
 using UnityEngine;
 
 namespace Frognar {
-  public class MeleeAttacker : Attacker {
+  public class HitAndRun : MonoBehaviour {
     [SerializeField] FloatVariable attackSpeed;
     [SerializeField] IntVariable damage;
+    Transform targetTransform;
+    Damageable target;
 
-    protected override void Attack() {
-      target.GetComponent<Damageable>()?.TakeDamage(damage.Value);
-      StartCoroutine(RunAttackAnimation(transform.position, target.position));
-      attackTime = Time.time + timeBetweenAttacks.Value;
+    public void SetTarget(Transform target) {
+      targetTransform = target;
+      this.target = target.GetComponent<Damageable>();
+    }
+
+    public void Attack() {
+      target.TakeDamage(damage.Value);
+      StartCoroutine(RunAttackAnimation(transform.position, targetTransform.position));
     }
 
     IEnumerator RunAttackAnimation(Vector2 originalPosition, Vector2 targetPosition) {
