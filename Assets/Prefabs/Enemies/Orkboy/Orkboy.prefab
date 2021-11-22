@@ -98,9 +98,9 @@ GameObject:
   - component: {fileID: -2285856814124734315}
   - component: {fileID: -1614816551386776118}
   - component: {fileID: -8482505367211602403}
-  - component: {fileID: -7387955315733761968}
-  - component: {fileID: -7171052680982886534}
   - component: {fileID: 1287049650692412074}
+  - component: {fileID: 5987443806870511042}
+  - component: {fileID: 368385182240243867}
   m_Layer: 7
   m_Name: Orkboy
   m_TagString: Enemy
@@ -241,35 +241,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6426e746687676444aa100f121d13613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-7387955315733761968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6909420332634635572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0ca4341341c10d4dbaec24d31db335c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackDistance: {fileID: 11400000, guid: 7a38dc87cc1953b49bd139eac5c95c6e, type: 2}
-  timeBetweenAttacks: {fileID: 11400000, guid: 83cc0eb0cc6533b4cb783ccd434756f6, type: 2}
-  attackSpeed: {fileID: 11400000, guid: 832a50be8355d5a41888f5182d7b5ffc, type: 2}
-  damage: {fileID: 11400000, guid: 0f87cd19e7b740d4fb005df332bf7ef5, type: 2}
---- !u!114 &-7171052680982886534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6909420332634635572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c29cc9606f23db14abf469eb9cda7889, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyFactory: {fileID: 11400000, guid: 3811b83e4f9f8724c9f831cf812b03c7, type: 2}
 --- !u!114 &1287049650692412074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,6 +254,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: {fileID: 11400000, guid: e1f5c5f467b65974d9f18ba4104eaf0e, type: 2}
+--- !u!114 &5987443806870511042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6909420332634635572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22609f5ff39adfc4d9a48ee4b0f6e188, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyFactory: {fileID: 11400000, guid: 3811b83e4f9f8724c9f831cf812b03c7, type: 2}
+  attackDistance: {fileID: 11400000, guid: 7a38dc87cc1953b49bd139eac5c95c6e, type: 2}
+  timeBetweenAttacks: {fileID: 11400000, guid: 83cc0eb0cc6533b4cb783ccd434756f6, type: 2}
+--- !u!114 &368385182240243867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6909420332634635572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77025a803dacc204da73f2b46b1168d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSpeed: {fileID: 11400000, guid: 9d63ec37b9261a0448202ea28960ba45, type: 2}
+  damage: {fileID: 11400000, guid: a61ef2aa26363a2429025b56ff9eaf09, type: 2}
 --- !u!1 &6909420333003850793
 GameObject:
   m_ObjectHideFlags: 0

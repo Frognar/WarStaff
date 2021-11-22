@@ -43,7 +43,6 @@ namespace Frognar {
         currentEnemyType = currentWave.enemies[Random.Range(0, currentWave.enemies.Count)];
         currentSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Count)];
         Enemy enemy = enemyFactories.factories[currentEnemyType].GetProduct(currentSpawnPoint.position, currentSpawnPoint.rotation);
-        enemy.Reset();
         currentWaveEnemies.Add(enemy);
         finishedSpawning = i == currentWave.count - 1;
 

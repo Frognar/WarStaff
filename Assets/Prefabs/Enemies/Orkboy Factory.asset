@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 753b33289b7e9e249b199042215de4bf, type: 3}
   m_Name: Orkboy Factory
   m_EditorClassIdentifier: 
-  productReceipt: {fileID: -7171052680982886534, guid: a1d6a18318356b0459c7b63a166b9b51, type: 3}
+  productReceipt: {fileID: 5987443806870511042, guid: a1d6a18318356b0459c7b63a166b9b51, type: 3}

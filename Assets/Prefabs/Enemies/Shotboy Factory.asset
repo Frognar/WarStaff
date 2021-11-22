@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 753b33289b7e9e249b199042215de4bf, type: 3}
   m_Name: Shotboy Factory
   m_EditorClassIdentifier: 
-  productReceipt: {fileID: 2307544439616684974, guid: a1b4b6568f434034ca91167e223d9243, type: 3}
+  productReceipt: {fileID: 2746436250243745898, guid: a1b4b6568f434034ca91167e223d9243, type: 3}

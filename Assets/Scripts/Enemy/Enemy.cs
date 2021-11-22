@@ -1,26 +1,42 @@
 using UnityEngine;
 
 namespace Frognar {
-  public class Enemy : MonoBehaviour, Factorable {
+  public abstract class Enemy : MonoBehaviour, Factorable {
     [SerializeField] EnemyFactory enemyFactory;
+    [SerializeField] FloatVariable attackDistance;
+    [SerializeField] FloatVariable timeBetweenAttacks;
     Health health;
-    protected TargetFinder targetFinder;
-    protected Attacker attacker;
+    TargetFinder targetFinder;
+    float attackTime;
+    protected Transform target;
+
+    protected bool HasTarget => target != null;
+    bool InRange => Vector3.Distance(transform.position, target.position) <= attackDistance.Value;
+    bool TimeToAttack => Time.time >= attackTime;
+    protected virtual bool CanAttack => HasTarget && InRange && TimeToAttack;
 
     protected virtual void Awake() {
       health = GetComponent<Health>();
-      health.OnDie += ReturnToFactory;
       targetFinder = GetComponent<TargetFinder>();
-      attacker = GetComponent<Attacker>();
     }
 
-    void Start() {
-      attacker.SetTarget(targetFinder.FindTarget());
+    protected virtual void Start() {
+      target = targetFinder.FindTarget();
+      health.RegisterOnDie(ReturnToFactory);
     }
 
-    public void Reset() {
-      health.Reset();
+    protected virtual void Update() {
+      if (CanAttack) {
+        Attack();
+      }
     }
+
+    void Attack() {
+      DoAttack();
+      attackTime = Time.time + timeBetweenAttacks.Value;
+    }
+
+    protected abstract void DoAttack();
 
     public void SetFactory<T>(Factory<T> factory) where T : MonoBehaviour, Factorable {
       enemyFactory = factory as EnemyFactory;

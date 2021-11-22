@@ -2,12 +2,8 @@ using UnityEngine;
 
 namespace Frognar {
   public class HealthBar : MonoBehaviour {
+    [SerializeField] Transform barHandler;
     HealthSystem healthSystem;
-    Transform barHandler;
-
-    void Awake() {
-      barHandler = transform.Find("BarHandler");
-    }
 
     public void SetHealthSystem(HealthSystem healthSystem) {
       this.healthSystem = healthSystem;

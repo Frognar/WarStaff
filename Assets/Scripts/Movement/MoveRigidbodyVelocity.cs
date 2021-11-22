@@ -1,12 +1,12 @@
 using UnityEngine;
 
 namespace Frognar {
-  [RequireComponent(typeof(Rigidbody2D))]
+  [RequireComponent(typeof(Rigidbody2D), typeof(MoveAnimator))]
   public class MoveRigidbodyVelocity : MonoBehaviour, MoveVelocity {
     [SerializeField] FloatVariable moveSpeed;
     MoveAnimator moveAnimator;
-    Vector3 velocity;
     Rigidbody2D rigidBody;
+    Vector3 velocity;
 
     void Awake() {
       rigidBody = GetComponent<Rigidbody2D>();
