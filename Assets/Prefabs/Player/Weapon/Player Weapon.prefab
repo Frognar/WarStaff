@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 296734752}
   - component: {fileID: 7543981772276569571}
   m_Layer: 0
-  m_Name: Ahriman_staff
+  m_Name: Player Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotPoint: {fileID: 8125149534400491614}
-  timeBetwenShots: {fileID: 11400000, guid: d052d4e1bd2c54d4b8d5d960d5997e24, type: 2}
+  data: {fileID: 11400000, guid: 6e39e145257112e459f4fa119b2d179e, type: 2}
   projectileFactory: {fileID: 11400000, guid: 17095ed5cbc2db44d8faf29c8ff026b2, type: 2}
 --- !u!114 &7543981772276569571
 MonoBehaviour:

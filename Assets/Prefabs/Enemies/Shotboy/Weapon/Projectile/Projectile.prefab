@@ -227,3 +227,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: b2b7a3de022a84f4abbc2e5f78bc9326, type: 2}
+  particleSystemFactory: {fileID: 11400000, guid: ef83b5f1599c34f44b8d82dc36cbbd6d, type: 2}

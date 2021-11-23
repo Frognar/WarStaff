@@ -1,9 +1,13 @@
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 namespace Frognar {
   public class Projectile : MonoBehaviour, Factorable {
     ProjectileFactory projectileFactory;
+    SpriteRenderer spriteRenderer;
+    Light2D light2d;
     [SerializeField] ProjectileData data;
+    [SerializeField] ParticleSystemFactory particleSystemFactory;
 
     public void ReturnToFactory() {
       projectileFactory.ReturnProduct(this);
@@ -13,9 +17,17 @@ namespace Frognar {
       this.projectileFactory = factory as ProjectileFactory;
     }
 
-    void Awake() {
-      var spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+    public void SetProjectileData(ProjectileData data) {
+      this.data = data;
       spriteRenderer.sprite = data.Sprite;
+      light2d.color = data.LightColor;
+      light2d.intensity = data.LightIntensity;
+      particleSystemFactory.SetParticleSystemColors(data.ExplosionColor, data.LightColor);
+    }
+
+    void Awake() {
+      spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+      light2d = GetComponentInChildren<Light2D>();
     }
 
     void Update() {
@@ -38,7 +50,7 @@ namespace Frognar {
 
     void DestroyProjectile() {
       CancelInvoke("DestroyProjectile");
-      var particleSystem = data.ParticleSystemFactory.GetProduct(transform.position, Quaternion.identity);
+      var particleSystem = particleSystemFactory.GetProduct(transform.position, Quaternion.identity);
       particleSystem.Play();
       ReturnToFactory();
     }

@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 136aa71adad87d442831f2884bdf62e9, type: 3}
-  m_Name: Player Time Between Attacks
+  m_Script: {fileID: 11500000, guid: cad2e03ec831171448214b601c7eecc8, type: 3}
+  m_Name: Fire Staff
   m_EditorClassIdentifier: 
-  value: 0.2
+  sprite: {fileID: 21300000, guid: d4c6852a4cd22fb4d8ca8f19378cb55b, type: 3}
+  timeBetwenShots: 0.1
+  projectileData: {fileID: 11400000, guid: 0bbd5fe61e64b114996f867eaa7a2b58, type: 2}

@@ -29,7 +29,7 @@ namespace Frognar {
       products.Push(product);
     }
 
-    public T GetProduct(Vector3 position, Quaternion rotation) {
+    public virtual T GetProduct(Vector3 position, Quaternion rotation) {
       if (products.Count > 0) {
         return ReuseProduct(position, rotation);
       }
