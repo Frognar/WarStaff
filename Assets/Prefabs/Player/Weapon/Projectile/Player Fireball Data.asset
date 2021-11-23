@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8cd606959661eb44986608984b33ff9b, type: 3}
-  m_Name: Shotboy Projectile Data
+  m_Name: Player Fireball Data
   m_EditorClassIdentifier: 
-  sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  sprite: {fileID: 21300000, guid: 7ddaaa2fe9cc6e948be0fb158eb5b8f3, type: 3}
   damage: 1
-  liveTime: 3
-  speed: 12
-  targetTag: Player
-  lightColor: {r: 0.30701816, g: 0.22761661, b: 0.8773585, a: 1}
-  lightIntensity: 0.5
+  liveTime: 0.8
+  speed: 25
+  targetTag: Enemy
+  lightColor: {r: 0.8679245, g: 0.29890484, b: 0.118725546, a: 1}
+  lightIntensity: 1
   explosionColor:
     m_Mode: 2
     m_GradientMin:
@@ -79,5 +79,5 @@ MonoBehaviour:
       m_Mode: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    m_ColorMin: {r: 0.013483422, g: 0.075223416, b: 0.9528302, a: 1}
-    m_ColorMax: {r: 0.08726415, g: 0.33756804, b: 0.5, a: 1}
+    m_ColorMin: {r: 1, g: 0.23113209, b: 0.23113209, a: 1}
+    m_ColorMax: {r: 0.8584906, g: 0.4753558, b: 0.08503916, a: 1}

@@ -1,12 +1,22 @@
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 namespace Frognar {
   public class FactorableParticleSystem : MonoBehaviour, Factorable {
     ParticleSystemFactory factory;
     ParticleSystem particles;
+    ParticleSystem.MainModule mainModule;
+    Light2D light;
 
     void Awake() {
-      particles = GetComponent<ParticleSystem>();  
+      particles = GetComponent<ParticleSystem>();
+      mainModule = particles.main;
+      light = GetComponentInChildren<Light2D>();
+    }
+
+    public void SetParticleSystemColors(ParticleSystem.MinMaxGradient startColor, Color color) {
+      mainModule.startColor = startColor;
+      light.color = color;
     }
 
     public void ReturnToFactory() {

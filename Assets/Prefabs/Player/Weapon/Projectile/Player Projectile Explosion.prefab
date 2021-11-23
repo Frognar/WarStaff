@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 5727576669765142773}
   - component: {fileID: 6669345204352167975}
   m_Layer: 0
-  m_Name: FellballExplosion
+  m_Name: Player Projectile Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
